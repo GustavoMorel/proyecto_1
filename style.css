@@ -209,7 +209,7 @@ main hr {
 }
 
 /*---------------------ESTILO SECCION DOS PRESENTACION---------------*/
-.presentacion {
+main .presentacion {
     width: 90%;
     height: 90%;
     margin-top: 10%;
@@ -234,7 +234,6 @@ main hr {
 
 .presentacion h1 {
     font-weight: 800;
-    font-display: ;
 }
 
 /*-tarjetas-*/
@@ -258,9 +257,10 @@ main hr {
     text-align: left;
 }
 
-.contenedor .subtitulo2{
+.contenedor .subtitulo2 {
     margin-top: 10px;
 }
+
 .contenedor .tarjeta i {
     color: red;
     margin-right: 5px;
@@ -300,8 +300,10 @@ main hr {
     }
 }
 
-@media (max-width: 630px) { /*Donde noto se empieza a romper*/
-    .contenedor .tarjeta .parrafo-tarjeta  {
+@media (max-width: 630px) {
+
+    /*Donde noto se empieza a romper*/
+    .contenedor .tarjeta .parrafo-tarjeta {
         width: 50px;
         height: 150px;
         line-height: 1;
@@ -312,11 +314,14 @@ main hr {
     }
 }
 
-@media (max-width: 569px) { /*Donde noto se empieza a romper nuevamente*/
-    .contenedor .subtitulo2{
-        margin-top:1px;
+@media (max-width: 569px) {
+
+    /*Donde noto se empieza a romper nuevamente*/
+    .contenedor .subtitulo2 {
+        margin-top: 1px;
         font-size: 9px;
     }
+
     .contenedor .tarjeta .parrafo-tarjeta {
         margin-top: -1px;
         margin-left: 1px;
@@ -332,6 +337,27 @@ main hr {
 }
 
 /*---------------------ESTILO SECCION TRES PORTAFOLIO---------------*/
+main .portafolio {
+    width: 90%;
+    height: 90%;
+    margin-top: 10%;
+    display: flex;
+    border: none;
+    flex-direction: column;
+}
+
+.subtitulo_dif {
+    text-align: center;
+    color: red;
+    font-size: var(--tamaño-fuente-subtitulos);
+    font-weight: 800;
+}
+
+.titulo_dif {
+    text-align: center;
+    font-weight: 800;
+}
+
 .contenedor .tarjeta-portafolio {
     width: 25%;
     height: 300px;
@@ -346,26 +372,147 @@ main hr {
     flex-direction: column;
 }
 
-.tarjeta-portafolio img{
+.tarjeta-portafolio img {
     width: 100%;
     border-radius: 10px 10px 1px 1px;
     margin-bottom: 5%;
 }
 
-.tarjeta-portafolio .parrafo-tarjeta{
+.tarjeta-portafolio .parrafo-tarjeta {
     margin-top: 10px;
     font-size: 10.5px;
 }
 
-.subtitulo-portafolio{
+.subtitulo-portafolio {
     color: red;
     font-size: 10px;
     font-weight: 800;
 }
 
-.parrafo-tarjeta-portafolio{
+.parrafo-tarjeta-portafolio {
     margin-top: 10px;
     font-size: 15px;
     font-weight: 900;
     font-weight: bold;
+}
+
+/*Queries seccion PORTAFOLIO*/
+@media screen and (max-width:768px) {
+    .portafolio .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portafolio .subtitulo-portafolio {
+        color: red;
+        font-size: 10px;
+        font-weight: 800;
+    }
+
+
+    .contenedor .tarjeta-portafolio {
+        width: 25%;
+        height: 200px;
+    }
+
+    .tarjeta-portafolio .parrafo-tarjeta-portafolio {
+        margin-top: 10px;
+        font-size: 10px;
+    }
+
+}
+
+
+@media (max-width: 569px) {
+
+    /*Donde noto se empieza a romper nuevamente*/
+    .tarjeta-portafolio img {
+        width: 100%;
+        height: 100px;
+        border-radius: 10px 10px 1px 1px;
+        margin-bottom: 5%;
+    }
+
+    .portafolio .subtitulo-portafolio {
+        color: red;
+        font-size: 8px;
+        font-weight: 800;
+    }
+
+    .contenedor .tarjeta-portafolio {
+        padding: 5px;
+    }
+
+}
+
+/*---------------------ESTILO SECCION CUATRO RESUMEN---------------*/
+main .resumen {
+    width: 90%;
+    height: 90%;
+    margin-top: 10%;
+    display: flex;
+    border: none;
+    flex-direction: column;
+}
+
+.resumen .contenedor-encabezado-resumen {
+    width: 80%;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin-left: 10%;
+    
+}
+
+
+
+.resumen ul {
+    width: 1000px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-right: auto;
+    border: 1px solid greenyellow;
+    background-color: #f3f3f3;
+    background-image: linear-gradient(to bottom right, rgb(209, 211, 212), rgb(249,251,251));
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.resumen li {
+    float: inline-start;
+    width: 200px;
+}
+
+.resumen li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 20px 22px;
+    text-decoration: none;
+}
+
+.resumen a.habilidades{
+    color: red;
+    background-image: linear-gradient(to bottom right, rgb(209, 211, 212), rgb(249,251,251));
+
+    height: 66px;
+    border-radius: 5px 0px 0px 5px;
+    padding: 5%;
+}
+
+.resumen li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.resumen a.active {
+    color: red;
+    background-image: linear-gradient(to bottom right, rgb(209, 211, 212), rgb(249,251,251));
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    border: 1px solid black;
 }
