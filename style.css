@@ -40,7 +40,6 @@ header {
     font-size: 11px;
 }
 
-.navbar-brand {}
 
 .navbar-brand img {
     width: 50%;
@@ -456,16 +455,16 @@ main .resumen {
 }
 
 .resumen .contenedor-encabezado-resumen {
-    width: 80%;
+    width: 100%;
     justify-content: center;
     justify-items: center;
     display: flex;
-    border: 1px solid red;
+    /* border: 1px solid red;*/
     border-radius: 5px;
     margin-left: 10%;
-    
-}
+    background: white;
 
+}
 
 
 .resumen ul {
@@ -475,9 +474,9 @@ main .resumen {
     padding: 0;
     overflow: hidden;
     margin-right: auto;
-    border: 1px solid greenyellow;
+    /*border: 1px solid greenyellow;*/
     background-color: #f3f3f3;
-    background-image: linear-gradient(to bottom right, rgb(209, 211, 212), rgb(249,251,251));
+    background-image: linear-gradient(to bottom right, rgb(209, 211, 212), rgb(249, 251, 251));
     gap: 20px;
     justify-content: center;
 }
@@ -485,7 +484,7 @@ main .resumen {
 
 .resumen li {
     float: inline-start;
-    width: 200px;
+    width: 25%;
 }
 
 .resumen li a {
@@ -494,15 +493,8 @@ main .resumen {
     text-align: center;
     padding: 20px 22px;
     text-decoration: none;
-}
-
-.resumen a.habilidades{
-    color: red;
-    background-image: linear-gradient(to bottom right, rgb(209, 211, 212), rgb(249,251,251));
-
-    height: 66px;
-    border-radius: 5px 0px 0px 5px;
-    padding: 5%;
+    font-size: 12px;
+    font-weight: 900;
 }
 
 .resumen li a:hover:not(.active) {
@@ -511,8 +503,380 @@ main .resumen {
 
 .resumen a.active {
     color: red;
-    background-image: linear-gradient(to bottom right, rgb(209, 211, 212), rgb(249,251,251));
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-image: linear-gradient(to bottom right, rgb(209, 211, 212), rgb(249, 252, 252));
+    box-shadow: 0 8px 16px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
-    border: 1px solid black;
+}
+
+/*Barra Resumen*/
+.resumen .contenedor-encabezado-resumen .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-family: acumin-pro, "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+    list-style: none;
+    font-size: 11px;
+}
+
+.resumen .contenedor-encabezado-resumen .navbar-nav {
+    height: 80px;
+    /*   border: 1px solid blue;*/
+    margin-left: -10%;
+}
+
+.resumen .contenedor-encabezado-resumen .navbar-nav {
+    width: 100%;
+    background: linear-gradient(to right, rgb(236, 240, 243), rgb(250, 252, 252));
+    background-image: linear-gradient(to bottom right, rgb(209, 211, 212), rgb(249, 251, 251));
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid green;*/
+    border-radius: 5%;
+}
+
+.resumen .contenedor-encabezado-resumen .nav-item {
+    width: 20%;
+    height: 70%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: red;
+    /*border: 1px solid red;*/
+    border-radius: 5%;
+}
+
+.resumen .contenedor-encabezado-resumen .nav-link {
+    justify-items: center;
+    justify-content: center;
+    /*  border: 1px solid violet;*/
+    border-radius: 5%;
+    text-decoration: none;
+}
+
+/*Subclase efecto*/
+.resumen .contenedor-encabezado-resumen .nav-item:hover {
+    border: none;
+    border-radius: 5%;
+    background-image: linear-gradient(to bottom right, rgb(209, 211, 212), rgb(249, 251, 251));
+    font-weight: 700;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.resumen .contenedor-encabezado-resumen .nav-link:hover {
+    color: red;
+}
+
+.resumen .contenedor-encabezado-resumen .contenedor-contenido-resumen {
+    width: 80%;
+    /* border: 1px solid blue;*/
+    margin-left: 10%;
+    display: flex;
+}
+
+
+/*-----Estilo Encabezado de tarjetas--*/
+.contenedor-tarjetas .resumen-años-contenido {
+    color: red;
+    font-size: 12px;
+    font-weight: 900;
+    /*  border: 1px solid green;*/
+}
+
+.contenedor-tarjetas .resumen-subtitulo-tarjetas-contenido {
+    color: black;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+
+
+
+
+/*--Nuevo CSS--*/
+.contenedor-contenido-resumen-todo {
+    width: 100%;
+    height: 400px;
+    /* border: 1px solid red;*/
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedor-contenido-resumen {
+    display: flex;
+}
+
+.contenedor-todo-izquierdo {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    position: relative;
+    justify-content: left;
+    /*   border: 1px solid green;*/
+}
+
+.contenedor-todo-derecho {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: left;
+    /*   border: 1px solid brown;*/
+}
+
+.contenedor-izquierdo {
+    width: 60px;
+    height: 550px;
+    /*  border: 1px solid blue;*/
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    position: relative;
+    z-index: -1;
+}
+
+.contenedor-izquierdo-linea {
+    width: 1px;
+    height: 450px;
+    border: 1px solid gray;
+    background-color: blue;
+    position: absolute;
+    z-index: 1;
+    margin-left: 13.5px;
+    margin-top: 75px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contenedor-izquierdo-globo {
+    width: 15px;
+    height: 15px;
+    border: 2px solid grey;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(216, 214, 214);
+    z-index: 1;
+    margin-top: 104px;
+    margin-left: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.linea_punto {
+    /*width: 1%;*/
+    margin-top: 8%;
+    margin-left: -5%;
+    position: relative;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.linea_punto::before {
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 0.5%;
+    background-color: gray;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    left: -10px;
+    top: 68px;
+}
+
+.contenedor-izquierdo-linea2 {
+    width: 3px;
+    height: 500px;
+    /*   border: 1px solid red;*/
+    background-color: blue;
+    position: absolute;
+    z-index: -1;
+    margin-left: 15px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contenedor-izquierdo-globo2 {
+    width: 15px;
+    height: 15px;
+    border: 2px solid grey;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(216, 214, 214);
+    z-index: 1;
+    margin-top: 256px;
+    margin-left: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.linea_punto2 {
+    margin-top: 13.5%;
+    margin-left: 0px;
+    position: relative;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.linea_punto2::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 0.5%;
+    background-color: gray;
+    left: -15px;
+    top: 40%;
+}
+
+.contenedor-izquierdo-globo3 {
+    width: 15px;
+    height: 15px;
+    border: 2px solid grey;
+    box-shadow: 3px gray;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(216, 214, 214);
+    z-index: 1;
+    margin-top: 428px;
+    margin-left: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.linea_punto3 {
+    margin-top: 1%;
+    margin-left: 1%;
+    position: relative;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.linea_punto3::before {
+    content: '';
+    position: absolute;
+    width: 42px;
+    height: 0.5%;
+    background-color: gray;
+    left: -24px;
+    top: 430px;
+}
+
+.titulo-años-contenido-resumen {
+    font-size: 10px;
+    color: red;
+    font-weight: 700;
+}
+
+.contenedor-tarjetas {
+    width: 90%;
+    height: 100%;
+    margin-left: 4%;
+    /* border: 1px solid yellow;*/
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tarjeta-resumen {
+    height: 30%;
+    border-radius: 5%;
+    /* border: 1px solid blueviolet;*/
+    padding: 10px;
+    top: 100px;
+}
+
+.subtitulo-tarjeta-resumen {
+    margin-top: 5px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.parrafo-tarjeta-subtitulo-resumen {
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.resumen-subtitulo-tarjetas-contenido {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.contenedor-referencia {
+    height: 75px;
+
+}
+
+.parrafo-tarjeta-resumen {
+    margin-top: 5%;
+    text-align: left;
+    font-size: 10px;
+}
+
+.tarjeta-resumen {
+    border: none;
+    background-image: linear-gradient(to bottom right, rgb(209, 211, 212), rgb(249, 251, 251));
+}
+
+/*Queries seccion RESUMEN*/
+@media screen and (max-width:350px) {
+    .contenedor-contenido-resumen {
+        width: 100%;
+        height: 400px;
+        /* border: 1px solid red;*/
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*ocultar barras izquierdas*/
+    .contenedor-izquierdo,
+    .contenedor-izquierdo-linea,
+    .linea_punto,
+    .contenedor-izquierdo-globo,
+    .contenedor-izquierdo2,
+    .contenedor-izquierdo-linea2,
+    .linea_punto2,
+    .contenedor-izquierdo-globo2,
+    .contenedor-izquierdo3,
+    .contenedor-izquierdo-linea3,
+    .linea_punto3,
+    .contenedor-izquierdo-globo3 {
+        display: none;
+    }
+
+
+    .contenedor-tarjetas {
+        width: 100px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .resumen-subtitulo-tarjetas-contenido p{
+        font-size: 5px;
+        font-weight: 800;
+    }
+
+    .subtitulo-tarjeta-resumen {
+        margin-top: 10px;
+        text-align: left;
+        font-size: 5px;
+        font-weight: 800;
+    }
+
+    .parrafo-tarjeta-subtitulo-resumen {
+        font-size: 7px;
+        font-weight: 900;
+    }
+
+    .contenedor-resumen .tarjeta-resumen {
+        width: 25%;
+        height: 600px;
+    }
+    .contenedor-referencia {
+        height: 75px;
+
+    }
+
+    .parrafo-tarjeta-resumen {
+        margin-top: 5%;
+        text-align: left;
+        font-size: 7px;
+    }
+
 }
