@@ -19,6 +19,7 @@ body {
     font-family: "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: rgb(236, 240, 243);
     padding: 20px;
+    margin-left: 10%;
 }
 
 
@@ -27,17 +28,20 @@ header {
     width: 90%;
     justify-content: center;
     background-color: rgb(236, 240, 243);
+    height: 10%;
 }
 
 
 .navbar {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
     font-family: acumin-pro, "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     width: 100%;
+    /* height: 20px;*/
     list-style: none;
-    font-size: 12px;
+    background-color: rgb(236, 240, 243);
+    /*border: 1px solid red;*/
 }
 
 
@@ -47,19 +51,28 @@ header {
 
 .navbar-nav {
     display: flex;
+    position: relative;
     justify-content: center;
-    gap: 30px;
-    margin-left: auto;
+    gap: 5px;
+    margin-left: 22%;
+    font-size: 11px;
+    font-weight: 900;
+    text-shadow: 0 0 1px rgb(55, 108, 179);
+    /*border: 1px solid blue;*/
 }
 
 
 .navbar-nav .btn-comprar {
+    position: absolute;
     margin-top: -5px;
     height: 40px;
     width: 100px;
     color: red;
     border: none;
     border-radius: 5px;
+    background-color: linear-gradient(to right, black, rgb(140, 143, 145));
+    font-weight: 800;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
 
 }
 
@@ -151,7 +164,7 @@ main .bienvenida-texto {
 /*ESTILO DERECHO*/
 main .bienvenida-foto {
     background-color: rgb(236, 240, 243);
-    margin-left: 20%;
+    margin-left: 10%;
     width: 38%;
     height: 70%;
     border: none;
@@ -226,8 +239,6 @@ main .presentacion {
     flex-direction: column;
 }
 
-
-
 .subtitulo {
     color: red;
     font-size: var(--tamaño-fuente-subtitulos);
@@ -244,39 +255,102 @@ main .presentacion {
     font-weight: 800;
 }
 
-/*-tarjetas-*/
-.contenedor {
+
+/*slider*/
+/* Contenedor del slider */
+.contenedor-slider {
+    position: relative;
+    /* Establece la posición relativa para posicionar elementos secundarios */
     width: 100%;
+    /* Ocupa el 100% del ancho del contenedor principal */
+    overflow: hidden;
+    /* Oculta el desbordamiento del contenido que excede el contenedor */
     margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
-.contenedor .tarjeta {
-    width: 25%;
+/* Estilo del slider (la lista de elementos) */
+.slider {
+    display: flex;
+    /* Muestra los elementos en línea (uno al lado del otro) */
+    transition: transform 0.5s ease-in-out;
+    /* Agrega una transición suave a la propiedad transform */
+}
+
+/* Estilo de cada diapositiva en el slider */
+.slide {
+    width: 15%;
+    /*Establece ancho de la diapositiva*/
     height: 200px;
-    background-color: linear-gradient(to right, rgb(230, 235, 239), rgb(248, 250, 251));
+    /*Establece el alto de la diapositiva*/
+    flex: 0 0 33.33%;
+    /*Establece el ancho de cada diapositiva en el 33.33% del contenedor para mostrar 3 a la vez */
+    box-sizing: border-box;
+    /* Incluye el relleno y el borde en el ancho y alto de la caja */
+    text-align: left;
+    /* Alinea el contenido de cada diapositiva a la Izquierda*/
     margin: 5px;
     padding: 20px;
+    /* Añade un relleno de 20 píxeles alrededor de cada diapositiva */
     border-radius: 10px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: left;
+    /* Agrega un borde redondeado*/
+    border: 1px solid #ddd;
+    /* Agrega un borde delgado con color gris claro */
+    background-color: linear-gradient(to right, rgb(230, 235, 239), rgb(248, 250, 251));
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* Agrega sombra al cuadro de la diapositiva*/
 }
 
-.contenedor .subtitulo2 {
+.slide .parrafo-tarjeta {
     margin-top: 10px;
+    font-size: 10.5px;
 }
 
-.contenedor .tarjeta i {
+.slider .slide i {
     color: red;
     margin-right: 5px;
 }
 
-.tarjeta .parrafo-tarjeta {
-    margin-top: 10px;
-    font-size: 10.5px;
+
+/* Estilo del contenedor de navegación (flechas) */
+.navegacion {
+    position: absolute;
+    /* Permite posicionar el contenedor de navegación de forma absoluta */
+    top: 50%;
+    /* Coloca el contenedor en la mitad superior del slider */
+    transform: translateY(-50%);
+    /* Centra verticalmente el contenedor de navegación */
+    width: 100%;
+    /* Ocupa el 100% del ancho del contenedor principal o contenedor padre de este elemento */
+    display: flex;
+    /* Muestra los elementos de navegación en línea */
+    justify-content: space-between;
+    /* Distribuye uniformemente el espacio entre los elementos de navegación */
 }
+
+/* Estilo de los botones de navegación */
+.navegacion button {
+    background-color: linear-gradient(to right, rgb(230, 235, 239), rgb(248, 250, 251));
+   /* background-color: #333;*/
+    /* Fondo oscuro para los botones de navegación */
+    color: rgb(12, 12, 12);
+    /* Texto en color blanco */
+    border: none;
+    /* Sin bordes en los botones */
+    padding: 10px;
+    /* Añade un relleno de 10 píxeles alrededor de cada botón */
+    font-size: 16px;
+    /* Tamaño de fuente de 16 píxeles */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre los botones para indicar que son clicables */
+}
+
+/*------------------------------------------*/
+
+.presentacion h1 {
+    font-weight: 800;
+}
+
 
 /*Queries seccion PRESENTACION*/
 @media screen and (max-width:768px) {
@@ -364,7 +438,13 @@ main .portafolio {
     text-align: center;
     font-weight: 800;
 }
-
+.contenedor {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .contenedor .tarjeta-portafolio {
     width: 25%;
     height: 300px;
@@ -630,8 +710,8 @@ main .resumen {
     height: 0.5%;
     background-color: gray;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    left: -10px;
-    top: 68px;
+    left: -12px;
+    top: 72px;
 }
 
 .contenedor-izquierdo-linea2 {
@@ -672,7 +752,7 @@ main .resumen {
     height: 0.5%;
     background-color: gray;
     left: -15px;
-    top: 40%;
+    top: 41%;
 }
 
 .contenedor-izquierdo-globo3 {
@@ -764,9 +844,10 @@ main .resumen {
 
 /*Queries seccion RESUMEN*/
 @media screen and (max-width:480px) {
-.contenedor-encabezado-resumen{
-    visibility:hidden;
-}
+    .contenedor-encabezado-resumen {
+        visibility: hidden;
+    }
+
     /*ocultar barras izquierdas*/
     .contenedor-izquierdo,
     .contenedor-izquierdo-linea,
@@ -1166,7 +1247,7 @@ main .resumen {
 }
 
 .contactame .contactame-izquierdo {
-    width: 30%;
+    width: 35%;
     margin: 5px;
     display: flex;
     flex-direction: column;
@@ -1174,6 +1255,7 @@ main .resumen {
     border: none;
     border-radius: 5%;
     gap: 10px;
+    /*border: 1px solid green;*/
 }
 
 .imagen img {
@@ -1255,27 +1337,43 @@ main .resumen {
     border: none;
     border-radius: 5%;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 .contactame .contactame-derecho {
-    width: 65%;
+    display: flex;
+    position: relative;
+    width: 60%;
+    height: ;
+    margin-left: 5%;
     background-image: linear-gradient(to bottom right, rgb(209, 211, 212), rgb(249, 251, 251));
     border: none;
     border-radius: 5%;
+    /* border: 1px solid violet;*/
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.contactame-derecho .contactame-formulario {
+    /* display: flex;*/
+    position: absolute;
+    width: 100%;
+    /* border: 1px solid red;*/
+    margin-top: 1px;
+    margin-left: 2px;
 }
 
 .encabezado-form {
     font-size: 10px;
     /*border: 1px solid green;*/
-    /* color: firebrick;*/
+    color: gray;
     font-weight: 900;
 }
 
-.encabezado-form-phone{
+.encabezado-form-phone {
     font-size: 10px;
     font-weight: 900;
     margin-left: 10%;
+    color: gray;
 }
 
 
@@ -1283,10 +1381,11 @@ form {
     /* Centra formulario en la página */
     margin-top: 1em;
     margin-left: 3em;
-    width: 85%;
+
+
     /* Estructura de formulario */
     padding: 1em;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc;*/
     border-radius: 1em;
     text-align: left;
 }
@@ -1302,38 +1401,39 @@ form {
 }
 
 .etiqueta-texto1 {
-    width: 260px;
-    height: 40px;
-    border: 1px solid gray;
+    width: 250px;
+    height: 35px;
+    border: 1px solid rgb(201, 197, 197);
     border-radius: 5%;
 }
 
 .etiqueta-texto2 {
-    width: 260px;
+    width: 250px;
     margin-left: 30px;
-    height: 40px;
-    border: 1px solid gray;
+    height: 35px;
+    border: 1px solid rgb(201, 197, 197);
     border-radius: 5%;
 }
 
 .etiqueta-texto {
-    width: 550px;
-    height: 40px;
-    border: 1px solid gray;
+    width: 525px;
+    height: 35px;
+    border: 1px solid rgb(201, 197, 197);
     border-radius: 5%;
 }
 
 .areatexto {
-    width: 550px;
-    height: 200px;
-    border: 1px solid gray;
+    width: 525px;
+    height: 125px;
+    border: 1px solid rgb(201, 197, 197);
     border-radius: 5%;
 }
 
 .btn-send {
-    width: 550px;
+    top: 1px;
+    width: 525px;
     height: 40px;
-    background-color: rgb(255, 0, 170);
+    background-color: rgb(255, 0, 43);
     color: white;
     border-radius: 5%;
     font-size: 10px;
@@ -1435,21 +1535,25 @@ textarea:focus {
 
 @media screen and (max-width:1024px) {
 
-    .contactame-derecho{
+    .contactame-derecho {
         width: 100%;
     }
+
     .etiqueta-texto,
-    .areatexto{
+    .areatexto {
         width: 100%;
         /*border: 1px solid red;*/
     }
-    .contactame-1 .etiqueta-texto1, .etiqueta-texto2{
+
+    .contactame-1 .etiqueta-texto1,
+    .etiqueta-texto2 {
         width: 100%;
     }
-    .btn-send{
+
+    .btn-send {
         width: 100%;
     }
-    
+
 }
 
 /*-----------------------Estilos FOOTER-------------------------------*/
@@ -1461,16 +1565,17 @@ textarea:focus {
 }
 
 /*:::::Pie de Pagina*/
+/*:::::Pie de Pagina*/
 .pie-pagina {
     width: 90%;
-    /* background-color: #0a141d;*/
-    background-image: linear-gradient(to bottom right, rgb(209, 211, 212), rgb(249, 251, 251));
     border-radius: 5%;
+    background-color: #0a141d;
 }
 
 .pie-pagina .seccion1 {
     width: 100%;
-    /* max-width: 1200px;*/
+    height: 200px;
+    max-width: 1200px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1480,60 +1585,67 @@ textarea:focus {
 
 .pie-pagina .seccion1 .box figure {
     width: 100%;
-    height: 100%;
+    height: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
 }
 
 .pie-pagina .seccion1 .box figure img {
-    width: 200px;
-    border-radius: 10%;
+    left: 10px;
+    width: 150px;
+    height: 150px;
+    background-color: #0d2033;
+    /* border: 1px solid red;*/
 }
 
 .pie-pagina .seccion1 .box h2 {
-    color: #383636ef;
+    color: #fff;
     margin-bottom: 25px;
     font-size: 20px;
-    font-weight: 900;
 }
 
 .pie-pagina .seccion1 .box p {
-    color: #383636ef;
+    color: #efefef;
     margin-bottom: 10px;
 }
 
 .pie-pagina .seccion1 .red-social {
     display: flex;
+    width: 60%;
     gap: 20px;
-    justify-content: left;
-    align-items: center;
-    justify-items: center;
-
 }
 
 .pie-pagina .seccion1 .red-social a {
-    display: inline-block;
+
     text-decoration: none;
-    width: 45px;
-    height: 45px;
+    /* width: 45px;
+    height: 45px;*/
     line-height: 45px;
     color: #fff;
     margin-right: 10px;
     background-color: #0d2033;
     text-align: center;
     transition: all 300ms ease;
-    border-radius: 10%;
+    background-color: #0d2033;
 
+    /* border: 1px solid blue;*/
 }
 
-.pie-pagina .btn-redes-whatsapp {
+.btn-redes-linkedin {
+    left: 20px;
     width: 40px;
     height: 40px;
-    border: none;
-    border-radius: 5%;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*border: 1px solid red;*/
+    background-color: #0d2033;
+}
 
+.btn-redes-whatsapp {
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    /*border: 1px solid red;*/
+    background-color: #0d2033;
 }
 
 .pie-pagina .seccion1 .red-social a:hover {
