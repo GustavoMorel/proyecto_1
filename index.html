@@ -127,67 +127,67 @@
 
       <div class="contenedor-slider">
         <div class="slider">
-            <div class="slide">
-                <i class="fa-brands fa-html5"></i>
-                <i class="fa-regular fa-file-code"></i>
-                <i class="fa-brands fa-square-js"></i>
-                <h2 class="subtitulo2">Desarrollo Web</h2>
+          <div class="slide">
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-regular fa-file-code"></i>
+            <i class="fa-brands fa-square-js"></i>
+            <h2 class="subtitulo2">Desarrollo Web</h2>
 
-                <p class="parrafo-tarjeta">
-                    Solución en Desarrollo Web, basandose en Tecnología HTML 5, CSS, JS.
-                </p>
+            <p class="parrafo-tarjeta">
+              Solución en Desarrollo Web, basandose en Tecnología HTML 5, CSS, JS.
+            </p>
 
-            </div>
-            <div class="slide">
-                <i class="fa-solid fa-network-wired"></i>
-                <h2 class="subtitulo2">Redes Lan</h2>
-                <p class="parrafo-tarjeta">
-                    Cableado Estructural y Configuración de Redes LAN.
-                </p>
-            </div>
-            <div class="slide">
-                <i class="fa-solid fa-robot"> </i><img src="images/arduino.png" alt="">
-                <h2 class="subtitulo2">Mecatronica</h2>
+          </div>
+          <div class="slide">
+            <i class="fa-solid fa-network-wired"></i>
+            <h2 class="subtitulo2">Redes Lan</h2>
+            <p class="parrafo-tarjeta">
+              Cableado Estructural y Configuración de Redes LAN.
+            </p>
+          </div>
+          <div class="slide">
+            <i class="fa-solid fa-robot"> </i><img src="images/arduino.png" alt="">
+            <h2 class="subtitulo2">Mecatronica</h2>
 
-                <p class="parrafo-tarjeta">
-                    Montajes de soluciones mecatrónicas, basadas en tecnología Arduino
-                </p>
-            </div>
-            <div class="slide">
-                <i class="fa-regular fa-message"></i>
-                <h2 class="subtitulo2">Mobile App</h2>
-                <p class="parrafo-tarjeta">
-                    There are many variations of passges of Lorem Ipsum
-                    available, but the majority
-                </p>
-            </div>
-            <div class="slide">
-                <i class="fa-solid fa-wifi"></i>
-                <h2 class="subtitulo2">CEO Martketing</h2>
-                <p class="parrafo-tarjeta">
-                    Always free from repetition, injected humour, or
-                    non-charecteristic words etc.
-                </p>
-            </div>
-            <div class="slide">
-                <i class="fa-brands fa-slack"></i>
-                <h2 class="subtitulo2">Personal Porfolio April</h2>
-                <p class="parrafo-tarjeta">
-                    It uses a dictionary of over 200 latin word, combined with
-                    a handful of model sentence.
-                </p>
-            </div>
+            <p class="parrafo-tarjeta">
+              Montajes de soluciones mecatrónicas, basadas en tecnología Arduino
+            </p>
+          </div>
+          <div class="slide">
+            <i class="fa-regular fa-message"></i>
+            <h2 class="subtitulo2">Mobile App</h2>
+            <p class="parrafo-tarjeta">
+              There are many variations of passges of Lorem Ipsum
+              available, but the majority
+            </p>
+          </div>
+          <div class="slide">
+            <i class="fa-solid fa-wifi"></i>
+            <h2 class="subtitulo2">CEO Martketing</h2>
+            <p class="parrafo-tarjeta">
+              Always free from repetition, injected humour, or
+              non-charecteristic words etc.
+            </p>
+          </div>
+          <div class="slide">
+            <i class="fa-brands fa-slack"></i>
+            <h2 class="subtitulo2">Personal Porfolio April</h2>
+            <p class="parrafo-tarjeta">
+              It uses a dictionary of over 200 latin word, combined with
+              a handful of model sentence.
+            </p>
+          </div>
         </div>
         <div class="navegacion">
-            <button class="prev">&lt;</button>
-            <button class="next">&gt;</button>
+          <button class="prev">&lt;</button>
+          <button class="next">&gt;</button>
         </div>
-    </div>
+      </div>
 
 
 
 
-      
+
     </section>
 
     <!--linea divisoria entre secciones-->
@@ -541,7 +541,7 @@
         </div>
 
         <div class="contactame-derecho">
-          <form class="contactame-formulario" action="">
+          <form id="contactForm" class="contactame-formulario" action="">
             <div class="contactame-1">
               <div class="bloque-nombre">
                 <p class="encabezado-form">YOUR NAME</p>
@@ -560,9 +560,21 @@
             <p class="encabezado-form">YOUR MESSAGE</p>
             <p><textarea id="msg" class="areatexto" name="user_message"></textarea></p>
 
-            <button class="btn-send" type="submit">SEND MESSAGE</button>
-
+            <!-- Botón de enviar -->
+            <button type="button" id="submitButton" class="btnSend">SEND MESSAGE</button>
           </form>
+          <!-- Mensaje de éxito (inicialmente oculto)
+          <div id="mensaje" class="hidden">
+            Enviado con éxito
+          </div>-->
+
+          <!-- Mensaje de éxito (inicialmente oculto) -->
+          <div id="successMessage" class="hidden">
+            <p id="successText">Enviado con éxito</p>
+            <button id="resetButton" onclick="resetForm()">Limpiar Formulario</button>
+          </div>
+
+
         </div>
       </div>
     </section>

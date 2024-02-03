@@ -1,3 +1,27 @@
+/*3. SECCION CONTACTAME - Mensaje de "Enviado con éxito" en el formulario*/
+document.addEventListener('DOMContentLoaded', function () {
+  // Obtiene referencias a elementos HTML
+  const contactForm = document.getElementById('contactForm');
+  const successMessage = document.getElementById('successMessage');
+  const submitButton = document.getElementById('submitButton');
+  const nameInput = document.getElementById('name');
+
+  // Agrega un evento de clic al botón de enviar
+  submitButton.addEventListener('click', function () {
+    const enteredName = nameInput.value;
+
+    // Simula el envío del formulario
+    setTimeout(function () {
+     // contactForm.style.display = 'none';
+      successMessage.innerHTML = `${enteredName} tu Mensaje fue Enviado con éxito!!!`;
+      successMessage.style.display = 'block';
+    }, 2000);  // 2000 milisegundos (2 segundos)
+  });
+});
+
+
+
+
 /*4. SLIDER SECCION LO QUE HAGO - "What I Do"*/
 // Espera a que el DOM esté completamente cargado antes de ejecutar el script
 document.addEventListener('DOMContentLoaded', function () {

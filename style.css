@@ -331,7 +331,7 @@ main .presentacion {
 /* Estilo de los botones de navegación */
 .navegacion button {
     background-color: linear-gradient(to right, rgb(230, 235, 239), rgb(248, 250, 251));
-   /* background-color: #333;*/
+    /* background-color: #333;*/
     /* Fondo oscuro para los botones de navegación */
     color: rgb(12, 12, 12);
     /* Texto en color blanco */
@@ -438,6 +438,7 @@ main .portafolio {
     text-align: center;
     font-weight: 800;
 }
+
 .contenedor {
     width: 100%;
     margin: 20px auto;
@@ -445,6 +446,7 @@ main .portafolio {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .contenedor .tarjeta-portafolio {
     width: 25%;
     height: 300px;
@@ -1290,6 +1292,9 @@ main .resumen {
     margin-left: 20px;
 }
 
+
+
+
 .contactame-derecho .contactame-1 {
     display: flex;
     flex-direction: row;
@@ -1353,6 +1358,10 @@ main .resumen {
 
 }
 
+/*----------------------------------------Modificado para TP2-JS-Interacción con el DOM----*/
+
+
+/*------------viejo------------*/
 .contactame-derecho .contactame-formulario {
     /* display: flex;*/
     position: absolute;
@@ -1362,6 +1371,39 @@ main .resumen {
     margin-left: 2px;
 }
 
+/*------------viejoFin---------*/
+
+.contactame-derecho .contactForm {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    /* border: 1px solid red;*/
+    margin-top: 1px;
+    margin-left: 2px;
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    position: absolute;
+    display: flex;
+    top: 480px;
+    left: 120px;
+    background-image: linear-gradient(to bottom right, rgb(209, 211, 212), rgb(249, 251, 251));
+    border: none;
+    border-radius: 5%;
+    /*border: 1px solid violet;*/
+     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   display: none;
+}
+
+/* Estilo para el mensaje de éxito */
+#successMessage {
+    /* Añade espacio en la parte superior del mensaje */
+    margin-top: 10px;
+    /*Formato de texto Color para indicar éxito */
+    color: green;
+    font-weight: 800;
+}
 .encabezado-form {
     font-size: 10px;
     /*border: 1px solid green;*/
@@ -1429,7 +1471,7 @@ form {
     border-radius: 5%;
 }
 
-.btn-send {
+.btnSend {
     top: 1px;
     width: 525px;
     height: 40px;
@@ -1446,6 +1488,11 @@ textarea:focus {
     /* Destacado adicional para elementos que tienen el cursor */
     border-color: #000;
 }
+
+/*-------------------------------------------*/
+
+
+
 
 /*Queries seccion CONTACTAME*/
 @media screen and (max-width:414px) {
