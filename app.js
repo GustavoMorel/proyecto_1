@@ -1,3 +1,16 @@
+/*2. SECCION PORTAFOLIO - Mensaje "Saber más"*/
+// Función para mostrar la superposición
+function mostrarOverlay(overlayId) {
+  document.getElementById(overlayId).style.display = 'flex';
+}
+
+// Función para cerrar la superposición
+function cerrarOverlay(overlayId) {
+  document.getElementById(overlayId).style.display = 'none';
+}
+
+
+
 /*3. SECCION CONTACTAME - Mensaje de "Enviado con éxito" en el formulario*/
 document.addEventListener('DOMContentLoaded', function () {
   // Obtiene referencias a elementos HTML
