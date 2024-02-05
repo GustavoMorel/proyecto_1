@@ -1,3 +1,16 @@
+/*1. SECCION BIENVENIDOS -  imagen de la sección de bienvenida*/
+// Función para cambiar la imagen al pasar el ratón sobre ella
+function cambiarImagen() {
+  document.getElementById("miImagen").src = "images/img2.jpg";
+}
+
+// Función para revertir la imagen a la original cuando el mouse sale
+function revertirImagen() {
+  document.getElementById("miImagen").src = "images/foto4_1.png";
+}
+
+
+
 /*2. SECCION PORTAFOLIO - Mensaje "Saber más"*/
 // Función para mostrar la superposición
 function mostrarOverlay(overlayId) {

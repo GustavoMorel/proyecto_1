@@ -162,7 +162,7 @@ main .bienvenida-texto {
 }
 
 /*ESTILO DERECHO*/
-main .bienvenida-foto {
+/*main .bienvenida-foto {
     background-color: rgb(236, 240, 243);
     margin-left: 10%;
     width: 38%;
@@ -178,7 +178,32 @@ main .bienvenida-foto img {
     margin-left: 20%;
     width: 60%;
     height: 90%;
-}
+}*/
+#imagenDiv {
+    background-color: rgb(236, 240, 243);
+    margin-left: 10%;
+    width: 38%;
+    height: 70%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  /* Estilos para la imagen dentro del contenedor */
+  #imagenDiv img {
+    justify-items: center;
+    margin-left: 20%;
+    width: 60%;
+    height: 90%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Efecto de escala al pasar el ratón sobre la imagen */
+  #imagenDiv img:hover {
+    transform: scale(1.1);
+  }
 
 main hr {
     width: 90%;
