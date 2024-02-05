@@ -188,7 +188,9 @@ main .bienvenida-foto img {
     border-radius: 5px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 10px;
-    overflow: hidden;
+    overflow: hidden; /*La propiedad CSS overflow especifica: si recortar contenido, 
+    dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque 
+    hidden: El contenido es recortado y no se muestran barras de posición.*/
   }
 
   /* Estilos para la imagen dentro del contenedor */
@@ -197,7 +199,9 @@ main .bienvenida-foto img {
     margin-left: 20%;
     width: 60%;
     height: 90%;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Transition:Esta propiedad permite hacer un pasaje gradual entre las propiedades que cambian en dos instancias de un elemento, 
+    controlando además la velocidad y en animaciones más avanzadas el modo en que se ejecuta la transición. TRANSFORM: La propiedad CSS transform te permite modificar el espacio de coordenadas del modelo de formato visual CSS. 
+    Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos. ease-in-out comenzará lentamente, será más rápido en el medio de la animación y luego terminará lentamente. */
   }
 
   /* Efecto de escala al pasar el ratón sobre la imagen */
